@@ -1,0 +1,133 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Offcanvas template for Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/offcanvas/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="offcanvas.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-light" >
+    <div id="app">
+    <main role="main" class="container" >
+      <div class="my-3 p-3 bg-white rounded box-shadow">
+        <h5 class="" style="text-align: center;">St John the Evangelist Parish </h5>
+        <h6 class="" style="text-align: center;">Contrato de la Catequesis Familiar</h6>
+        <div class="">
+         
+          <p class="">
+            <strong class="" style="padding-bottom: 2px;">Como padres nosotros nos comprometemos a:</strong>
+            Traer a nuestra familia a Misa todos los fines de semana y azegurarme que las tarjetas sean selladas.<br>
+            Azegurarme que mis hijos y yo lleguemos a tiempo a todas clases que necesitan para recibir el Sacramento. <br>
+            Asistir a las reuniones de Padres la fecha y hora señalada. Las reuniones empiezan a las <strong>6 P.M.</strong><br>
+            Participar activamente y terminar los proyectos familiares que nos sean asignados. <br>
+            Rezar con nuestra familia todos los dias, Ser un modelo de vida Cristiana. <br>
+            <strong>Leer y reflexionar las lecturas del fin de semana cuando menos una ves a la semana
+            </strong> <br>
+            Instruir a nuestra familia en la fe (oraciones, practicas y enseñanzas de nuestra fe). <br>
+            Aconzejar a nuestros hijos/as para que presten atención y que sigan las reglas de la Catequesis. <br>
+            He recivido y entiendo el calendario de fechas, reuniones y horarios. <strong><u>{{lista[0][0].horarios}}</u></strong> <br>
+            Yo entiendo que si hay algun cambio se anunciara cuando menos una semana antes en el folleto de la Iglesia. <br>
+            Tambien entiendo que los niños/as solo pueden faltar <strong> 3 veces, que esto consiste en una combinacion de Clases Sacramentales, Misa y Reunion para Padres, y que si llegan tarde 3 veces a clase equivale a 1 falta, y que la reunion para padres es mandatoria. <u>{{lista[0][0].mandatoria}}</u>
+            Entiendo que la cuota no es reembolsable una vez registrados. <u>{{lista[0][0].cuota}}</u> </strong> <br>
+            La Iglesia no requiere padrinos para la Primera Comunion, esto depende de la familia, en caso de que hay un padrino esta persona se sentara en una seccion reservada duarante la Misa de Primera Comunion.
+            <br>
+            
+
+          </p><br>
+         
+        </div>
+          <div style="text-align: center;">
+            <div class="row">
+                    <div class="col-md-6">
+                        {{lista[0][0].padre}}<br><br>
+                        ___________________________ <br>
+                      Firma
+                    </div>
+                    <div class="col-md-6">
+                      {{lista[0][0].madre}} <br><br>
+                        ___________________________ <br>
+                        Firma
+                    </div>
+            </div>
+        </div><br><br>
+        <p>
+            <strong>
+                Como niño/a yo me comprometo a:
+            </strong><br>
+            Escuchar y poner atención a mis padres, catequistas, y sacerdote cuando estén hablando. 
+            Ir a misa con mi familia los fines de semana y azegurame que mi tarjeta sea sellada.
+            Asistir a todas las clases que necesito. <br>
+            Trabajar con mi mama, mi papa, y mis hermanos para completar la tarea que me fuera asignada. <br>
+            Orar con mi familia todos los dias y asistir a Misa los fines de semana y dias de obligacion.
+            Aprender mis oraciones y otras cosas importantes que necesito para conocer mi fe.
+            Tratar a los demás con respeto. Seguir la reglas de la Catequesis. <br>
+            Respetar la propiedad de la Iglesia y sus alrededores. <br>
+            Yo entiendo que solo puedo faltar 3 veces a las clases Sacramentales,en combinacion con Misa y la reunion de padres, y entiendo que si llego tarde a clase 3 veces equivale a 1 falta.
+
+        </p>
+        <div style="text-align: center;">
+            <div class="row">
+                    <div class="col-md-6" v-for="lista in lista[0][0].ninos"> 
+                        {{lista.nombre}} <br><br>
+                        ___________________________ <br>
+                      Firma
+                    </div>
+                    
+            </div>
+        </div>
+        <p>
+            <strong>Como miembros del equipo de la Catequesis nos comprometemos a:</strong><br>
+            Proveer amplias oportunidades para que su familia asista a Misa los fines de semana, y dias de obligacion.
+            Proveer una lista de las fechas para las Clase Sacramentales y para la reunion de Padres.
+            Darles la información necesaria para que oren como familia, compartan la escritura y sigan el Año Liturgico
+            Claramente establecer las reglas y guías para la Catequesis tanto para los adultos como para los niños.
+            Ser un modelo Cristiano en la comunidad, con los padres, niños, y miembros del equipo.
+            
+           </p>
+           <div style="text-align: center;">
+            <div class="row">
+                    <div class="col-md-6">
+                        jesu ismael osuna carrillo <br><br>
+                        ___________________________ <br>
+                      Firma
+                    </div>
+                    <div class="col-md-6">
+                      <br><br>
+                        ___________________________ <br>
+                        Fecha
+                    </div>
+            </div>
+        </div>
+        </div>
+       
+
+      
+    </main>
+  </div>
+  <script src="vue/vue.js"></script>
+  <script src="vue/primerForm.js"></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="js/vendor/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vendor/holder.min.js"></script>
+    <script src="offcanvas.js"></script>
+   
+  </body>
+</html>
