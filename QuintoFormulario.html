@@ -1,0 +1,179 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+   
+    <title>Offcanvas template for Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/offcanvas/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="offcanvas.css" rel="stylesheet">
+  </head>
+  <style>
+     table tr td{
+  
+  font-size: medium;
+  
+  
+}
+  table{
+    margin-bottom: 5px;
+  }
+
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  transform: scale(2);
+  padding: 10px;
+}
+
+/* Might want to wrap a span around your checkbox text */
+.checkboxtext
+{
+  /* Checkbox text */
+  font-size: 110%;
+  display: inline;
+}
+  </style>
+
+  <body class="bg-light" >
+    <div id="app">
+    <main role="main" class="container" >
+      <div class="my-3 py-3 bg-white rounded box-shadow">
+       <table style="margin-left: 20px; width: 100%; font-size: small;">
+         <tr>
+           <td style="width: 50%; " >{{iglesia}} </td>
+           <td style="width: 50%; " >{{familia}} <u>{{lista[0].id}}</u> {{ano}} <u>{{lista[0].ano}}</u></td>
+         </tr>
+       </table>
+       <table style="margin-left: 20px; width: 100%; font-size: small;">
+        <tr >
+          <td style="width: 50%; " >{{censo}}</td>
+          <td style="width: 50%; " >{{entrevistado}}: <u>{{lista[0].entrvistado}}</u></td>
+        </tr>
+      </table>
+      <table style="margin-left: 20px; width: 100%; font-size: small;">
+        <tr >
+          <td style="width: 50%; " >{{apellidoF}}: <u>{{lista[0].familia}}</u></td>
+          <td style="width: 50%; " >{{fechaRegistro}}: <u>{{lista[0].registro}}</u></td>
+        </tr>
+      </table>
+      <table style="margin-left: 20px; width: 100%; font-size: small;">
+        <tr >
+          <td style="width: 50%; " >{{telefono}}: <u>{{lista[0].numeroTel}}</u></td>
+          <td style="width: 50%; " >{{celular}} : <u>{{lista[0].numeroCel}}</u></td>
+        </tr>
+      </table>
+      <table style="margin-left: 20px; width: 100%; font-size: small;">
+        <tr >
+          <td style="width: 20%; " >{{direccion}}: <u>{{lista[0].direccion}}</u></td>
+          <td style="width: 12%; " >{{ciudad}}: <u>{{lista[0].ciudad}}</u></td>
+          <td style="width: 12%; " >{{estado}}: <u>{{lista[0].estado}}</u></td>
+          <td style="width: 10%; " >{{cp}}: <u>{{lista[0].cp}}</u></td>
+          <td style="width: 20%; " >{{email}}: <u>{{lista[0].email}}</u></td>
+        </tr>
+      </table>
+      <table style="margin-left: 20px; width: 100%; font-size: small;">
+        <tr >
+          <td style="width: 50%; " >{{nombreP}}: <u>{{lista[0].nombrePadre}}</u></td>
+          <td style="width: 50%; " >{{fechaP}}: <u>{{lista[0].fechaPadre}}</u></td>
+        </tr>
+      </table>
+      <table style="margin-left: 20px; width: 100%; font-size: small;">
+        <tr >
+          <td style="width: 50%; " >{{nombreM}} <u>{{lista[0].nombreMadre}}</u></td>
+          <td style="width: 50%; " >{{fechaM}}: <u>{{lista[0].fechaMadre}}</u></td>
+        </tr>
+      </table>
+      <table style="margin-left: 20px; width: 100%; font-size: small;">
+        <tr >
+          <td style="width: 50%; " >{{casados}} <u>{{lista[0].casado}}</u></td>
+          <td style="width: 50%; " >{{fechaMatri}}: <u>{{lista[0].fechaMa}} {{lista[0].lugarMa}}</u></td>
+        </tr>
+      </table>
+      <p style="margin-left: 20px;">{{parrafo}}.</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">{{t1c1}}</th>
+            <th scope="col">{{t1c2}}</th>
+            <th scope="col">{{t1c3}}</th>
+            <th scope="col">{{t1c4}}</th>
+            <th scope="col">{{t1c5}}</th>
+            <th scope="col">{{t1c6}}</th>
+            <th scope="col">{{t1c7}}</th>
+            <th scope="col">{{t1c8}}</th>
+            <th scope="col">{{t1c9}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="lista in lista[0].alumnos">
+            <td>{{lista.estudiante}}</td>
+            <td>{{lista.asistencia}}</td>
+            <td>{{lista.nacimiento}}</td>
+            <td>{{lista.cidadNa}}</td>
+            <td>{{lista.fechaBut}}</td>
+            <td>{{lista.lugarBut}}</td>
+            <td>{{lista.fechacom}}</td>
+            <td>{{lista.lugarcom}}</td>
+            <td>{{lista.grado}}</td>
+            
+            
+          </tr>
+        
+         
+          
+        </tbody>
+       
+      </table>
+      <table style="margin-left: 20px; width: 100%;">
+        <tr>
+          <tr>
+            <td style="width: 100%; " >{{alergias}}? <u> {{lista[0].alergia}}</u></td>
+            
+          </tr>
+        </tr>
+      </table>
+      <table style="margin-left: 20px; width: 100%;">
+        <tr>
+          <tr>
+            <td style="width: 100%; " >{{nota}}? <u>{{lista[0].nota}}</u></td>
+            
+          </tr>
+        </tr>
+      </table>
+      <table style="margin-left: 20px; width: 100%; font-size: small;">
+        <tr >
+          <td style="width: 50%; " >{{casoM}} <u>{{lista[0].emergencia}}</u></td>
+          <td style="width: 50%; " >{{telM}}: <u>{{lista[0].numeroEme}}</u></td>
+        </tr>
+      </table>
+      </div>
+      
+    </main>
+  </div>
+  <script src="vue/vue.js"></script>
+  <script src="vue/quintoForm.js"></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+
+    <script src="js/bootstrap.min.js"></script>
+  
+   
+  </body>
+</html>

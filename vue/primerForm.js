@@ -15,7 +15,7 @@ let app = new Vue({
             // this.lista.push(guardado);
             // console.log(app.lista)
             this.lista.push(JSON.parse(guardado))
-            console.log(this.lista[0][0].ninos)
+            //console.log(this.lista[0][0].ninos)
             
         } 
         

@@ -1,0 +1,230 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+   
+    <title>Offcanvas template for Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/offcanvas/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="offcanvas.css" rel="stylesheet">
+  </head>
+  <style>
+     .tabla tr th{
+  border: 1px solid black;
+  font-size: small;
+}
+
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  transform: scale(2);
+  padding: 10px;
+}
+
+/* Might want to wrap a span around your checkbox text */
+.checkboxtext
+{
+  /* Checkbox text */
+  font-size: 110%;
+  display: inline;
+}
+  </style>
+
+  <body class="bg-light" >
+    <div id="app">
+    <main role="main" class="container" >
+      <div class="my-3 bg-white rounded box-shadow">
+          <div style="width: 100%; border-color: black; border: 1px solid; height: auto; overflow: hidden;">
+            <div style="width: 100%  ">
+
+              <table >
+                <tr style="width: 100%;">
+                  <th style="width: 88%; background-color: black;"><h4 style="color: white; margin-left: 5px;">{{titulo}}</h4></th>
+                  <th style="width: 230px;"><h4 >R20</h4></th>
+                </tr>
+                
+              </table>
+              <h4 style="text-align: center; margin: 5px;">{{subtitulo}}</h4>
+              <p style="margin-left: 10px;">{{parrafo}} </p>
+              <table style="margin-left: 10px; margin-right: 10px; " class="tabla">
+                <tr style="width: 100%;">
+                  <th style="width: 200px; font-size: small; height: 15px;">{{t1c1}} </th>
+                  <th style="width: 45%;"><p>{{lista[0][0].escuela}}</p></th>
+                  <th style="font-size: small; width: 10%;" >{{t1c2}} </th>
+                  <th style="width: 20%;"><p>{{lista[0][0].grupo}}</p></th>
+                </tr>
+              </table>
+              <table style="margin-left: 10px; margin-right: 10px; "  class="tabla">
+                <tr style="width: 100%;">
+                  <th style="width: 10%">{{t1c3}} </th>
+                  <th style="width: 40%;"><p>{{lista[0][0].evento}}</p></th>
+                  <th style="width: 15%;">{{t1c4}}</th>
+                  <th ><p><p>{{lista[0][0].fechaevento}}</p></p></th>
+                </tr>
+              </table>
+              <h5 style="margin: 10px;">{{subtitulo2}}: </h5>
+
+              <table style="margin-left: 10px; margin-right: 10px; "  class="tabla">
+                <tr style="width: 100%;">
+                  <th style="width: 200px; font-size: small; height: 45px;">{{t2c1}}</th>
+                  <th style="width: 40%;"><p>{{lista[0][0].destino}}</p></th>
+                  <th style="font-size: small; width: 10%;" >{{t2c2}} </th>
+                  <th style="width: 25%;"><p>{{lista[0][0].ciudad}}</p></th>
+                </tr>
+              </table>
+              <table style="margin-left: 10px; margin-right: 10px; "  class="tabla">
+                <tr style="width: 100%;">
+                  <th style="width: 200px; font-size: small; height: 45px;">{{t2c3}} </th>
+                  <th style="width: 20%;"><p>{{lista[0][0].trasnporte}}</p></th>
+                  <th style="font-size: small;" >{{t2c4}} </th>
+                  <th style="width: 15%;"><p>{{lista[0][0].cuota}}</p></th>
+                  <th style="font-size: small;" >{{t2c5}} </th>
+                  <th style="width: 20%;"><p>{{lista[0][0].regresar}}</p></th>
+                </tr>
+              </table>
+              <table style="margin-left: 10px; margin-right: 10px; "  class="tabla">
+                <tr style="width: 100%;">
+                  <th style="width: 200px; font-size: small; height: 45px;">{{t2c6}}  </th>
+                  <th style="width: 30%;"><p>{{lista[0][0].salida}}</p></th>
+                  <th style="font-size: small; width: 10%;" >{{t2c7}} </th>
+                  <th style="width: 25%;"><p>{{lista[0][0].regreso}}</p></th>
+                </tr>
+              </table>
+              <p style="margin: 10px;"> {{parrafo2}}  </p> 
+              <p style="margin: 10px;">
+               {{parrafo3}}
+              </p>
+              <p style="margin: 10px;">
+                {{parrafo4}} 
+              </p>
+              <h5 style="margin: 10px;">{{subtitulo3}} </h5>
+              <P style="margin: 10PX;">
+                {{parrafo5}}
+              </P>
+
+               <div class="row">
+                 <div class="col-md-6">
+                   <table style="margin-left: 10px; margin-right: 10px;" class="tabla">
+                     <tr style="width: 100%;">
+                       <th style="width: 200px; border-right: 0px none ">{{t3c1}} </th>
+                       <th style="width: 400px;"><p>{{lista[0][0].participante}}</p></th>
+                     </tr>
+                   </table>
+                   <table style="margin-left: 10px; margin-right: 10px;"  class="tabla">
+                    <tr style="width: 100%;">
+                      <th style="width: 200px;">{{t3c2}} </th>
+                      <th style="width: 400px;"><p>{{lista[0][0].padre}}</p></th>
+                    </tr>
+                  </table>
+                  <table style="margin-left: 10px; margin-right: 10px;"  class="tabla">
+                    <tr style="width: 100%;">
+                      <th style="width: 400px; ">{{t3c3}}  </th>
+                      <th style="width: 400px;"></th>
+                      <th style="width: 80px;">{{t3c4}} </th>
+                      <th style="width: 200px;"><p>{{lista[0][0].fecha}}</p></th>
+                    </tr>
+                  </table>
+                  <table style="margin-left: 10px; margin-right: 10px;"  class="tabla">
+                    <tr style="width: 100%;">
+                      <th style="width: 200px;">{{t3c5}} </th>
+                      <th style="width: 400px;"><p>{{lista[0][0].telefonocasa}}</p></th>
+                    </tr>
+                  </table>
+                  <table style="margin-left: 10px; margin-right: 10px;"  class="tabla">
+                    <tr style="width: 100%;">
+                      <th style="width: 200px;">{{t3c6}} </th>
+                      <th style="width: 400px;"><p>{{lista[0][0].celular}}</p></th>
+                    </tr>
+                  </table>
+                  <table style="margin-left: 10px; margin-right: 10px;"  class="tabla">
+                    <tr style="width: 100%;">
+                      <th style="width: 200px;">{{t3c7}} </th>
+                      <th style="width: 400px;"><p>{{lista[0][0].otro}}</p></th>
+                    </tr>
+                  </table>
+                 </div>
+                <div class="col-md-6">
+                  <table style="margin-left: 10px; margin-right: 10px;"  class="tabla">
+                    <tr style="width: 100%;">
+                      <th style="width: 10%; text-align: center;"> {{t4c1}}</th>
+                    </tr>
+                  </table>
+                  <table style="margin-left: 10px; margin-right: 10px;"  class="tabla">
+                    <tr style="width: 100%;">
+                      <th style="width: 200px;">{{t4c2}}  </th>
+                      <th style="width: 400px;">{{lista[0][0].grupomedico}}</th>
+                    </tr>
+                  </table>
+                  <table style="margin-left: 10px; margin-right: 10px;"  class="tabla">
+                    <tr style="width: 100%;">
+                      <th style="width: 200px;">{{t4c3}} </th>
+                      <th style="width: 400px;">{{lista[0][0].telefonodtoctor}}</th>
+                    </tr>
+                  </table>
+                  <table style="margin-left: 10px; margin-right: 10px;"  class="tabla">
+                    <tr style="width: 100%;">
+                      <th style="width: 200px;">{{t4c4}}  </th>
+                      <th style="width: 400px;">{{lista[0][0].compania}}</th>
+                    </tr>
+                  </table>
+                  <table style="margin-left: 10px; margin-right: 10px;"  class="tabla">
+                    <tr style="width: 100%;">
+                      <th style="width: 200px;">{{t4c5}}  </th>
+                      <th style="width: 400px;">{{lista[0][0].poliza}}</th>
+                    </tr>
+                  </table>
+                  <table style="margin-left: 10px; margin-right: 10px;"  class="tabla">
+                    <tr style="width: 100%;">
+                      <th style="width: 5%; height: 40px;"><input type="checkbox" name="" id="" style="margin-left: 10px; margin-top: 8px;"> &nbsp;&nbsp;{{t4c6}} </th>
+                      
+                    </tr>
+                  </table>
+                  <table style="margin-left: 10px; margin-right: 10px;"  class="tabla">
+                    <tr style="width: 100%;">
+                      <th style="width: 200px;">{{t4c7}} </th>
+                      <th style="width: 400px;">{{lista[0][0].fecharecibo}} <br> {{lista[0][0].reicbo}} </th>
+                    </tr>
+                  </table>
+                </div>
+               </div>
+                
+                
+                
+               
+                
+
+                <br>
+            </div>
+          
+        </div>
+       
+
+      
+    </main>
+  </div>
+  <script src="vue/vue.js"></script>
+  <script src="vue/cuartoForm.js"></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+
+    <script src="js/bootstrap.min.js"></script>
+  
+   
+  </body>
+</html>

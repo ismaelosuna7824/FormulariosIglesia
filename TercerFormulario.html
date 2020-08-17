@@ -1,0 +1,157 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+   
+    <title>Offcanvas template for Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/offcanvas/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="offcanvas.css" rel="stylesheet">
+  </head>
+  <style>
+    table, td, th {
+  border: 1px solid black;
+  font-size: small;
+}
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  transform: scale(2);
+  padding: 10px;
+}
+
+/* Might want to wrap a span around your checkbox text */
+.checkboxtext
+{
+  /* Checkbox text */
+  font-size: 110%;
+  display: inline;
+}
+  </style>
+
+  <body class="bg-light" >
+    <div id="app">
+    <main role="main" class="container" >
+      <div class="my-3 p-3 bg-white rounded box-shadow">
+          <div style="width: 100%; border-color: black; border: 1px solid; height: auto; overflow: hidden;">
+            <div style="width: 100%  ">
+
+              <table >
+                <tr style="width: 100%;">
+                  <th style="width: 88%; background-color: black;"><h4 style="color: white; margin-left: 5px;">{{titulo}}</h4></th>
+                  <th style="width: 230px;"><h4 >PR Release</h4></th>
+                </tr>
+                
+              </table>
+              <h4 style="text-align: center; margin: 5px;">{{subtitulo}}</h4>
+              <p style="margin-left: 10px;">{{parrafo}} </p>
+              <table style="margin-left: 10px; margin-right: 10px; ">
+                <tr style="width: 100%;">
+                  <th style="width: 200px; font-size: small; height: 45px;">{{t1c1}} </th>
+                  <th style="width: 40%;"><p>{{lista[0][0].escuela}}</p></th>
+                  <th style="font-size: small;" >{{t1c2}} </th>
+                  <th style="width: 35%;"><p>{{lista[0][0].grupo}}</p></th>
+                </tr>
+              </table>
+              <table style="margin-left: 10px; margin-right: 10px; " >
+                <tr style="width: 100%;">
+                  <th style="width: 10%">{{t1c3}} </th>
+                  <th style="width: 40%;"><p>{{lista[0][0].evento}}</p></th>
+                  <th style="width: 15%;">{{t1c4}}</th>
+                  <th ><p><p>{{lista[0][0].fechaevento}}</p></p></th>
+                </tr>
+              </table>
+              <h5 style="margin: 10px;">{{subtitulo2}}: </h5>
+              <p style="margin: 10px;"> {{parrafo2}}  </p> 
+              <p style="margin: 10px;">
+               {{parrafo3}}
+              </p>
+              <p style="margin: 10px;">
+                {{parrafo4}} </p>
+                <table style="margin-left: 10px; margin-right: 10px; " >
+                  <tr style="width: 100%;">
+                    <th style="width: 20%;">{{t2c1}}</th>
+                    <th style="width: 30%;"><p>{{lista[0][0].participante}}</p></th>
+                    <th >{{t2c2}}</th>
+                    <th style="width: 35%;"></th>
+                  </tr>
+                </table>
+                <table style="margin-left: 10px; margin-right: 10px; height: 35px; ">
+                  <tr style="width: 100%;">
+                    <th style="width: 300px; font-size: small;">{{address}} </th>
+                    <th  style="width: 80%;"><p>{{lista[0][0].direccion}}</p></th>
+                  </tr>
+                </table>
+                <table style="margin-left: 10px; margin-right: 10px; " >
+                  <tr style="width: 100%;" >
+                    <th style="width: 21%; height: 40px;">{{t2c3}}</th>
+                    <th style="width: 50%;"><p>{{lista[0][0].telefono}}</p></th>
+                    <th >{{t2c4}}</th>
+                    <th style="width: 35%;"><p>{{lista[0][0].correo}}</p></th>
+                  </tr>
+                </table>
+                <h5 style="margin: 10px;">{{subtitulo3}} </h5>
+                <P style="margin: 10PX;">
+                  {{parrafo5}}
+                </P>
+                <div class="row" style="margin: 10px;">
+                  <div class="col-md-4">
+                    <input type="checkbox" >  &nbsp; &nbsp;{{parrafo6}}
+                  </div>
+                  <div class="col-md-8">
+                    <input type="checkbox" >   &nbsp; &nbsp;{{parrafo7}}   
+                  </div>
+                </div>
+                <table style="margin-left: 10px; margin-right: 10px; " >
+                  <tr style="width: 100%;">
+                    <th style="width: 20%;">{{tutor}} </th>
+                    <th style="width: 30%;"><p>{{lista[0][0].tutor}}</p></th>
+                    <th >{{firmaP}}</th>
+                    <th style="width: 35%;"><p></p></th>
+                  </tr>
+                </table>
+               
+                <table style="margin-left: 10px; margin-right: 10px; " >
+                  <tr style="width: 100%;">
+                    <th style="width: 10%">{{firmaT}} </th>
+                    <th style="width: 40%;"></th>
+                    <th style="width: 15%;">{{date}}</th>
+                    <th ><p><p>{{lista[0][0].fecha}}</p></p></th>
+                  </tr>
+                </table>
+
+                <br>
+            </div>
+          
+        </div>
+       
+
+      
+    </main>
+  </div>
+  <script src="vue/vue.js"></script>
+  <script src="vue/tercerForm.js"></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+
+    <script src="js/bootstrap.min.js"></script>
+  
+   
+  </body>
+</html>
